@@ -32,7 +32,11 @@ rl.question("Digite um número: ", (numero) => {
 
   if (!isNaN(num)) {
     // Código para identificar se o número fornecido pertence à sequência de Fibonnaci
-    console.log("O número pertence à sequência de Fibonnaci");
+    if (eFibonacci(num)) {
+      console.log("O número pertence à sequência de Fibonnaci");
+    } else {
+      console.log("O número não pertence à sequência de Fibonnaci");
+    }
   } else {
     console.log("Número inválido!");
   }
