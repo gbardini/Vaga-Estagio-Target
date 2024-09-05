@@ -12,7 +12,16 @@ const faturamentoMensalTotal = (dados) => {
   return soma;
 };
 
-console.log(faturamentoMensalTotal(dados));
+const performanceMensalEstado = (dados) => {
+  for (let i = 0; i < dados.length; i++) {
+    console.log(
+      dados[i].estado +
+        " - " +
+        ((dados[i].valor / faturamentoMensalTotal(dados)) * 100).toFixed(2) +
+        "%"
+    );
+  }
+};
 
-let teste = faturamentoMensalTotal(dados).toFixed(2);
-console.log(typeof teste);
+console.log(faturamentoMensalTotal(dados));
+console.log(performanceMensalEstado(dados));
