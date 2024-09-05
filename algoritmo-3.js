@@ -27,5 +27,27 @@ const maiorFaturamento = (dados) => {
   return parseFloat(maior.toFixed(2));
 };
 
+const mediaMensal = (dados) => {
+  let soma = 0;
+  for (let i = 0; i < dados.length; i++) {
+    soma += dados[i].valor;
+  }
+  media = soma / dados.length;
+  return parseFloat(media.toFixed(2));
+};
+
+const diasFaturamentoAcimaDaMedia = (dados) => {
+  let dias = 0;
+  let media = mediaMensal(dados);
+  for (let i = 0; i < dados.length; i++) {
+    if (dados[i].valor > media) {
+      dias++;
+    }
+  }
+  return dias;
+};
+
 console.log(menorFaturamento(dados));
 console.log(maiorFaturamento(dados));
+console.log(mediaMensal(dados));
+console.log(diasFaturamentoAcimaDaMedia(dados));
