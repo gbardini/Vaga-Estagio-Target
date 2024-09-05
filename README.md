@@ -72,17 +72,17 @@ node algoritmo-5.js
 Há um diretório chamado data dentro do projeto que contém dois arquivos JSON. Esses arquivos são usados como fonte de dados para alguns dos algoritmos.
 
 **Localização:** data/dados.json e data/dados-algoritmo-4.json
-Esses arquivos contêm informações no formato chave-valor;
+Esses arquivos contêm informações no formato chave-valor como por exemplo:
 
 ```json
 [
   {
-    "dia": "2024-09-01",
-    "valor": 100.5
+    "dia": "7",
+    "valor": 0
   },
   {
-    "dia": "2024-09-02",
-    "valor": 200.75
+    "dia": "8",
+    "valor": 42889.2258
   }
 ]
 ```
