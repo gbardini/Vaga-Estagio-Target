@@ -16,4 +16,16 @@ const menorFaturamento = (dados) => {
   return parseFloat(menor.toFixed(2));
 };
 
+const maiorFaturamento = (dados) => {
+  let maior = menorFaturamento(dados);
+  for (let i = 0; i < dados.length; i++) {
+    if (dados[i].valor > maior) {
+      maior = dados[i].valor;
+    }
+  }
+  console.log("O maior faturamento do mês foi: " + maior);
+  return parseFloat(maior.toFixed(2));
+};
+
 console.log(menorFaturamento(dados));
+console.log(maiorFaturamento(dados));
