@@ -16,6 +16,13 @@ function quadradoPerfeito(numero) {
   return raizExata === raiz && raiz * raiz === numero;
 }
 
+function eFibonacci(numero) {
+  return (
+    quadradoPerfeito(5 * numero ** 2 + 4) ||
+    quadradoPerfeito(5 * numero ** 2 - 4)
+  );
+}
+
 console.log(
   "Código feito para identificar se o número fornecido pertence à sequência de Fibonnaci"
 );
